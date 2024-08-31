@@ -36,4 +36,9 @@ RSpec.describe StringCalculator do
     calculator = StringCalculator.new
     expect { calculator.add("1,-2,3") }.to raise_error("Negative numbers not allowed: -2")
   end
+
+  it "returns 0 if invalid string passed" do
+    calculator = StringCalculator.new
+    expect(calculator.add("harsh")).to eq(0)
+  end
 end
